@@ -2,7 +2,7 @@
 
 <head>
   <html lang="en">
-    <nav>
+  <nav>
     <a href="index.html">Home</a>
     <a href="about.html">About Me</a>
   </nav>
@@ -12,6 +12,29 @@
   <title>Paaryn Photography</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
+    
+    nav {
+      background-color: #333;
+      padding: 10px 0;
+      text-align: center;
+    }
+    
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    
+    nav a:hover {
+      color: #f7c04a; /* gold-ish hover color */
+    }
+    
+    nav a.active {
+      border-bottom: 2px solid #f7c04a;
+    }
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
