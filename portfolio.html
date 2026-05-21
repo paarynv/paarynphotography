@@ -10,29 +10,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
   <style>
-    .portfolio-card {
-          position: relative;
-    display: block;
-    overflow: hidden;
-    border-radius: 20px;
-}
+.portfolio-card {
+    .portfolio-card:hover {
+      transform: scale(1.01);
+    }
 
-.portfolio-card img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-}
+    .portfolio-card img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
 
-.overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    padding: 30px;
-    color: white;
-    background: linear-gradient()
-    transform: scale(1.02)
-    transition: 0.4s ease
-}
+    .portfolio-card:hover img {
+      transform: scale(1.03);
+    }
+
+    /* ----------------------------- */
+    /* DARK OVERLAY */
+    /* ----------------------------- */
+
+    .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 50px;
+
+      background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.0)
+      );
+
+      box-sizing: border-box;
+    }
+
+    .overlay h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin: 0;
+    }
+
+    .overlay p {
+      margin-top: 10px;
+      color: #dddddd;
+      font-size: 1rem;
+    }
+    @media (max-width: 768px) {
+
+      header h1 {
+        font-size: 2.5rem;
+      }
+
+      .portfolio-card img {
+        height: 350px;
+      }
+
+      .overlay {
+        padding: 30px;
+      }
+
+      .overlay h2 {
+        font-size: 2rem;
+      }
+
+    }
     nav {
       background-color: #333;
       padding: 10px 0;
@@ -62,36 +106,32 @@
       color: #333;
     }
     header {
-      /* background-image: url('https://github.com/paarynv/paarynphotography/raw/main/LandingPageHeader.jpg'); */
-      /* background-size: cover; */
-      /* background-position: center;  */
-      color: white;
-      height: 100vh;
-      position: relative;
-  }
-    header .content {
-      position: absolute;
-      top: 70%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      padding-top: 160px;
+      padding-bottom: 80px;
       text-align: center;
-}
+    }
+
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      margin: 0;
+      font-size: 4rem;
+      margin-bottom: 20px;
     }
+
     header p {
       font-size: 1.2rem;
-      margin-top: 10px;
+      color: #cccccc;
+      max-width: 700px;
+      margin: auto;
+      line-height: 1.6;
     }
     main {
-      padding: 40px 20px;
-      max-width: 800px;
+      width: 90%;
+      max-width: 1400px;
       margin: auto;
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 50px;
+      padding-bottom: 100px;
     }
     section {
       margin-bottom: 40px;
@@ -117,18 +157,29 @@
 <body>
   
   <header>
-    
+    <h1>Portfolio</h1>
+    <p>
+      Wildlife, landscapes, and travel photography exploring light, nature, and storytelling.
+    </p>
   </header>
+
+  <!-- MAIN PORTFOLIO CARDS -->
+
   <main>
+
+    <!-- CARD 1 -->
+
     <a href="index.html" class="portfolio-card">
 
-      <img src="LandingPageHeader.jpg">
+      <img src="LandingPageHeader.jpg" alt="Test">
 
       <div class="overlay">
-        <h2>Test Card</h2>
-        <p>Wildlife • 2026</p>
+        <h2>Test1</h2>
+        <p>Test 3</p>
       </div>
 
     </a>
+
+
   </main>
 </body>
